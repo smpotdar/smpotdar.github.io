@@ -5,7 +5,7 @@ description: In this project, our task was to reconstruct an object in 3D using 
 img: /assets/img/3dr_rgb_thumbnail.gif
 ---
 
-In this project we implemented two different methods i.e. the 8-point alogithm and the 7-point alforithm to estimate
+In this project we implemented two different methods i.e. the 8-point algorithm and the 7-point algorithm to estimate
 the fundamental matrix from corresponding points in two images. Given the fun-
 damental matrix and calibrated intrinsics we computed the essential matrix and used it to compute a 3D metric reconstruction from 2D correspondences using triangulation.
 

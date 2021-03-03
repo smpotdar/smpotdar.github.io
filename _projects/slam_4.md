@@ -10,9 +10,9 @@ The system follows the tracking and mapping framework proposed in [1], which is 
 visual tracking and mapping systems. In this framework, mapping relies on the pose estimation from tracking to
 update the global model, and tracking uses the refined global model from mapping as reference.
 
-The visual tracking part of the system, which is also known as localization or visual odometry (VO), will be solved using point-to-plane
-iterative closest point (ICP) [2]. The mapping part will be done using point-based fusion [1]. However, unlike in
-[1], we do not consider the estimation of dynamic objects in this project since the input data are from a static
+The visual tracking part of the system, which is also known as localization or visual odometry (VO), is solved using point-to-plane
+iterative closest point (ICP) [2]. The mapping part is done using point-based fusion [1]. However, unlike in
+[1], we did not consider the estimation of dynamic objects in this project since the input data are from a static
 environment. 
 
 The output of the system for a squence of RGBD is shown below:

@@ -11,8 +11,7 @@ cameras but typically use a single camera for SLAM. In this
 project, we propose a different approach, where we present
 a Visual Simultaneous Localization and Mapping (VSLAM)
 system which integrates measurements from multiple cameras
-to achieve robust pose tracking and mapping for these au-
-tonomous systems in unknown complex environments. The well-
+to achieve robust pose tracking and mapping for these autonomous systems in unknown complex environments. The well-
 known feature based ORB SLAM system has been extended
 to work with three cameras in the final implementation. The
 theory behind this system can easily be extended to multiple
