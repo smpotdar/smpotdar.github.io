@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<title>Shubhankar  Potdar | blank</title>
+<title>Shubhankar  Potdar | 3D Reconstruction using RGB images</title>
 <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 ">
 
@@ -16,8 +16,8 @@
 " />
 <meta property="og:type" content="object" />
 <meta property="og:title" content="" />
-<meta property="og:url" content="/blog/index.html" />
-<meta property="og:description" content="blank" />
+<meta property="og:url" content="/projects/cv_4/" />
+<meta property="og:description" content="3D Reconstruction using RGB images" />
 <meta property="og:image" content="" />
 
 
@@ -37,7 +37,7 @@
 <link rel="shortcut icon" href="/assets/img/favicon.ico">
 <link rel="stylesheet" href="/assets/css/main.css">
 
-<link rel="canonical" href="/blog/">
+<link rel="canonical" href="/projects/cv_4/">
 
 <!-- JQuery -->
 <!-- jQuery -->
@@ -166,56 +166,41 @@
     <div class="container mt-5">
       <div class="post">
 
-  <div class="header-bar">
-    <h1></h1>
-    <h2></h2>
-  </div>
+  <header class="post-header">
+    <h1 class="post-title">3D Reconstruction using RGB images</h1>
+    <p class="post-description">In this project, our task was to reconstruct an object in 3D using 3D rgb images.</p>
+  </header>
+
+  <article>
+    <p>In this project we implemented two different methods i.e. the 8-point algorithm and the 7-point algorithm to estimate
+the fundamental matrix from corresponding points in two images. Given the fun-
+damental matrix and calibrated intrinsics we computed the essential matrix and used it to compute a 3D metric reconstruction from 2D correspondences using triangulation.</p>
+
+<p>The performance was evaluated on the Middlebury multi-view dataset.</p>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/3dr_im1.png" alt="" title="example image" />
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/3dr_im2.png" alt="" title="example image" />
+    </div>
+</div>
+<div class="caption">
+    The view from two different camera poses.
+</div>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/3dr_rgb.gif" alt="" title="example image" />
+    </div>
+</div>
+<div class="caption">
+    Scatter plot of 3D points extracted from the above images.
+</div>
 
 
-  <ul class="post-list">
-    
-      <li>
-        <h3><a class="post-title" href="/2020/09/28/github-metadata.html">a post with github metadata</a></h3>
-        <p class="post-meta">September 28, 2020</p>
-        <p>a quick run down on accessing github metadata.</p>
-      </li>
-    
-      <li>
-        <h3><a class="post-title" href="/2020/09/28/twitter.html">a post with twitter</a></h3>
-        <p class="post-meta">September 28, 2020</p>
-        <p>an example of a blog post with twitter</p>
-      </li>
-    
-      <li>
-        <h3><a class="post-title" href="/2018/12/22/distill.html">a distill-style blog post</a></h3>
-        <p class="post-meta">December 22, 2018</p>
-        <p>an example of a distill-style blog post and main elements</p>
-      </li>
-    
-  </ul>
-
-  
-<nav aria-label="Blog page naviation">
-  <ul class="pagination pagination-lg justify-content-center">
-    <li class="page-item disabled">
-      <a class="page-link" href="" tabindex="-1" aria-disabled="">Newer</a>
-    </li>
-    
-      
-        <li class="page-item active"><a class="page-link" href="/blog/index.html" title="blank">1</a></li>
-      
-        <li class="page-item "><a class="page-link" href="/blog/page/2/index.html" title="blank - page 2">2</a></li>
-      
-        <li class="page-item "><a class="page-link" href="/blog/page/3/index.html" title="blank - page 3">3</a></li>
-      
-    
-    <li class="page-item ">
-      <a class="page-link" href="/blog/page/2/">Older</a>
-    </li>
-  </ul>
-</nav>
-
-
+  </article>
 
 </div>
 

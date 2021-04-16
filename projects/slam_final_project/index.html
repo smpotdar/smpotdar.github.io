@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<title>Shubhankar  Potdar | blank</title>
+<title>Shubhankar  Potdar | ORB-SLAM using Multiple Cameras</title>
 <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 ">
 
@@ -16,8 +16,8 @@
 " />
 <meta property="og:type" content="object" />
 <meta property="og:title" content="" />
-<meta property="og:url" content="/blog/index.html" />
-<meta property="og:description" content="blank" />
+<meta property="og:url" content="/projects/slam_final_project/" />
+<meta property="og:description" content="ORB-SLAM using Multiple Cameras" />
 <meta property="og:image" content="" />
 
 
@@ -37,7 +37,7 @@
 <link rel="shortcut icon" href="/assets/img/favicon.ico">
 <link rel="stylesheet" href="/assets/css/main.css">
 
-<link rel="canonical" href="/blog/">
+<link rel="canonical" href="/projects/slam_final_project/">
 
 <!-- JQuery -->
 <!-- jQuery -->
@@ -166,56 +166,39 @@
     <div class="container mt-5">
       <div class="post">
 
-  <div class="header-bar">
-    <h1></h1>
-    <h2></h2>
-  </div>
+  <header class="post-header">
+    <h1 class="post-title">ORB-SLAM using Multiple Cameras</h1>
+    <p class="post-description">In this project we made a Visual Simultaneous Localization and Mapping (VSLAM) system which integrates measurements from multiple cameras to achieve robust pose tracking and mapping.</p>
+  </header>
 
+  <article>
+    <p><strong><em>Abstract</em></strong> : Most of the autonomous systems such as self-
+driving vehicles, autonomous aerial systems have multiple
+cameras but typically use a single camera for SLAM. In this
+project, we propose a different approach, where we present
+a Visual Simultaneous Localization and Mapping (VSLAM)
+system which integrates measurements from multiple cameras
+to achieve robust pose tracking and mapping for these autonomous systems in unknown complex environments. The well-
+known feature based ORB SLAM system has been extended
+to work with three cameras in the final implementation. The
+theory behind this system can easily be extended to multiple
+camera configurations. We have implemented this and shown
+experimental results on custom, KITTI, and the Argoverse
+datasets.</p>
 
-  <ul class="post-list">
-    
-      <li>
-        <h3><a class="post-title" href="/2020/09/28/github-metadata.html">a post with github metadata</a></h3>
-        <p class="post-meta">September 28, 2020</p>
-        <p>a quick run down on accessing github metadata.</p>
-      </li>
-    
-      <li>
-        <h3><a class="post-title" href="/2020/09/28/twitter.html">a post with twitter</a></h3>
-        <p class="post-meta">September 28, 2020</p>
-        <p>an example of a blog post with twitter</p>
-      </li>
-    
-      <li>
-        <h3><a class="post-title" href="/2018/12/22/distill.html">a distill-style blog post</a></h3>
-        <p class="post-meta">December 22, 2018</p>
-        <p>an example of a distill-style blog post and main elements</p>
-      </li>
-    
-  </ul>
+<p>A demo video of the project can be found by clicking on the image below</p>
 
-  
-<nav aria-label="Blog page naviation">
-  <ul class="pagination pagination-lg justify-content-center">
-    <li class="page-item disabled">
-      <a class="page-link" href="" tabindex="-1" aria-disabled="">Newer</a>
-    </li>
-    
-      
-        <li class="page-item active"><a class="page-link" href="/blog/index.html" title="blank">1</a></li>
-      
-        <li class="page-item "><a class="page-link" href="/blog/page/2/index.html" title="blank - page 2">2</a></li>
-      
-        <li class="page-item "><a class="page-link" href="/blog/page/3/index.html" title="blank - page 3">3</a></li>
-      
-    
-    <li class="page-item ">
-      <a class="page-link" href="/blog/page/2/">Older</a>
-    </li>
-  </ul>
-</nav>
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        <a href="https://youtu.be/W9X_5pSzR-o" target="_blank">
+            <img class="img-fluid rounded z-depth-1" src="/assets/img/slam_mc_orb.gif" alt="" title="example image" />
+        </a>
+    </div>
+</div>
 
+<p>For detailed information, please refer the paper.</p>
 
+  </article>
 
 </div>
 

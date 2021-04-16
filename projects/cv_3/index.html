@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<title>Shubhankar  Potdar | blank</title>
+<title>Shubhankar  Potdar | Lucas-Kanade Tracking</title>
 <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 ">
 
@@ -16,8 +16,8 @@
 " />
 <meta property="og:type" content="object" />
 <meta property="og:title" content="" />
-<meta property="og:url" content="/blog/index.html" />
-<meta property="og:description" content="blank" />
+<meta property="og:url" content="/projects/cv_3/" />
+<meta property="og:description" content="Lucas-Kanade Tracking" />
 <meta property="og:image" content="" />
 
 
@@ -37,7 +37,7 @@
 <link rel="shortcut icon" href="/assets/img/favicon.ico">
 <link rel="stylesheet" href="/assets/css/main.css">
 
-<link rel="canonical" href="/blog/">
+<link rel="canonical" href="/projects/cv_3/">
 
 <!-- JQuery -->
 <!-- jQuery -->
@@ -166,56 +166,86 @@
     <div class="container mt-5">
       <div class="post">
 
-  <div class="header-bar">
-    <h1></h1>
-    <h2></h2>
-  </div>
+  <header class="post-header">
+    <h1 class="post-title">Lucas-Kanade Tracking</h1>
+    <p class="post-description">In this assignment, I implemented 2 different variants of the famous Lucas-Kanade Tracking algorithm.</p>
+  </header>
 
+  <article>
+    <h4 id="lucas-kanade-tracking">Lucas-Kanade Tracking</h4>
 
-  <ul class="post-list">
-    
-      <li>
-        <h3><a class="post-title" href="/2020/09/28/github-metadata.html">a post with github metadata</a></h3>
-        <p class="post-meta">September 28, 2020</p>
-        <p>a quick run down on accessing github metadata.</p>
-      </li>
-    
-      <li>
-        <h3><a class="post-title" href="/2020/09/28/twitter.html">a post with twitter</a></h3>
-        <p class="post-meta">September 28, 2020</p>
-        <p>an example of a blog post with twitter</p>
-      </li>
-    
-      <li>
-        <h3><a class="post-title" href="/2018/12/22/distill.html">a distill-style blog post</a></h3>
-        <p class="post-meta">December 22, 2018</p>
-        <p>an example of a distill-style blog post and main elements</p>
-      </li>
-    
-  </ul>
+<p>In the first variant, we implemented a simple Lucas &amp; Kanade tracker with one single
+template. In the scenario of two-dimensional tracking with a pure translation warp function,</p>
 
-  
-<nav aria-label="Blog page naviation">
-  <ul class="pagination pagination-lg justify-content-center">
-    <li class="page-item disabled">
-      <a class="page-link" href="" tabindex="-1" aria-disabled="">Newer</a>
-    </li>
-    
-      
-        <li class="page-item active"><a class="page-link" href="/blog/index.html" title="blank">1</a></li>
-      
-        <li class="page-item "><a class="page-link" href="/blog/page/2/index.html" title="blank - page 2">2</a></li>
-      
-        <li class="page-item "><a class="page-link" href="/blog/page/3/index.html" title="blank - page 3">3</a></li>
-      
-    
-    <li class="page-item ">
-      <a class="page-link" href="/blog/page/2/">Older</a>
-    </li>
-  </ul>
-</nav>
+\[W(x;p) = x + p\]
 
+<p>The problem can be described as follows: starting with a rectangular neighborhood of
+pixels \(\mathbb{N} \in \{ \bf {x_d} \}^{D}_{d=1}\) on frame \(I_t\), the Lucas-Kanade tracker aims to move it by an offset
+\(\mathbf{p} = [ p_x, p_y ]^T\) to obtain another rectangle on frame \(I_{t+1}\), so that the pixel squared difference in the two rectangles is minimized:</p>
 
+\[\mathbf{p^*} = argmin_{\mathbf{p}} \sum_{\mathbf{x} \in \mathbb{N}} || I_{t+1}(\mathbf{x + p}) - I_{t}(\mathbf{x})||_{2}^{2}\]
+
+<p>Running the simple KLT gives us the following output:</p>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/klt.gif" alt="" title="example image" />
+    </div>
+</div>
+<div class="caption">
+    Simple Lucas Kanade Tracking
+</div>
+
+<p>We can see that the car we are tracking differs in appearance from the first and the last frame. Along with this, we are also updating the template after processing each frame and the error is accumulating whihc is lead to a drift in the template. We us [1] to help solve the problem and the updated tracking can be seen the below footage with a blue bounding box.</p>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/klt_wfc.gif" alt="" title="example image" />
+    </div>
+</div>
+<div class="caption">
+    Lucas Kanade Tracking with template correction
+</div>
+
+<h4 id="affine-motion-subtraction">Affine Motion Subtraction</h4>
+
+<p>In the above section we assumed the the motion is limited to pure translation, in this section we implemented a tracker for estimating dominant affine motion in a
+sequence of images and subsequently identify pixels corresponding to moving objects in the scene.</p>
+
+<p>To estimate dominant motion, the entire image \(I_{t}\) serves as the template to
+be tracked in image \(I_{t+1}\), that is, \(I_{t+1}\) is assumed to be approximately an affine warped 
+version of \(I_{t}\). This approach is reasonable under the assumption that a majority of the pixels
+correspond to the stationary objects in the scene whose depth variation is small relative to
+their distance from the camera.</p>
+
+<p>Using a planar affine warp function you can recover the vector \(\Delta p = [ p^1 , . . . , p^6 ]^{T}\),</p>
+
+<p>\(\mathbf{x'} = \mathcal{W}(\mathbf{x;p})  =  \begin{bmatrix} 1 + p_{1}  &amp; p_{2} \\  p_{4} &amp; 1 + p_{1} \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} + \begin{bmatrix} p_{3} \\ p_{6} \end{bmatrix}\).</p>
+
+<p>One can represent this affine warp in homogeneous coordinates as,</p>
+
+\[\widetilde{\mathbf{x}}' = \mathbf{M} \widetilde{\mathbf{x}}\]
+
+<p>where,</p>
+
+\[M = \begin{bmatrix} 1 + p_{1}  &amp; p_{2} &amp; p_{3} \\  p_{4} &amp; 1 + p_{5} &amp; p_{6} \\ 0 &amp; 0 &amp; 1 \end{bmatrix}\]
+
+<p>Once we are able to compute the transformation matrix \mathbf{M} relating an image pair \(I_{t}\) and
+\(I_{t+1}\), a naive way for determining pixels lying on moving objects is as follows: warp the
+image It using \mathbf{M} so that it is registered to \(I_{t+1}\) and subtract it from \(I_{t+1}\) ; the locations
+where the absolute difference exceeds a threshold can then be declared as corresponding
+to locations of moving objects. We can visualise the results below:</p>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/ams.gif" alt="" title="example image" />
+    </div>
+</div>
+<div class="caption">
+    Affine motion subtraction to track multiple objects  
+</div>
+
+  </article>
 
 </div>
 
