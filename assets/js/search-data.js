@@ -9,7 +9,14 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-blog",
+  },{id: "nav-coursework",
+          title: "Coursework",
+          description: "Coursework done at CMU. Due to CMU policy I am not allowed to publish the code for the course assignments, but I have posted the results.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/coursework/";
+          },
+        },{id: "nav-blog",
           title: "blog",
           description: "",
           section: "Navigation",
@@ -451,6 +458,9 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
+          section: "News",},{id: "news-track-check-repeat-accepted-to-cvpr-2021",
+          title: '“Track, Check, Repeat” accepted to CVPR 2021',
+          description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",
@@ -496,6 +506,36 @@ ninja.data = [{
           description: "another project with an image 🎉",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
+            },},{id: "projects-image-stitching-using-homographies",
+          title: 'Image stitching using homographies',
+          description: "In this assignment, I performed stiched of two images by first finding correspondencies between the two images and estimating the planar homography transformation matrix between the two images.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/cv_2/";
+            },},{id: "projects-lucas-kanade-tracking",
+          title: 'Lucas-Kanade Tracking',
+          description: "In this assignment, I implemented 2 different variants of the famous Lucas-Kanade Tracking algorithm.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/cv_3/";
+            },},{id: "projects-3d-reconstruction-using-rgb-images",
+          title: '3D Reconstruction using RGB images',
+          description: "In this project, our task was to reconstruct an object in 3D using 3D rgb images.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/cv_4/";
+            },},{id: "projects-particle-filter",
+          title: 'Particle Filter',
+          description: "In this assignment, our task was to implement the popular Particle Filter technique for localising a robot given its sensor data and a map.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/slam_1/";
+            },},{id: "projects-3d-dense-reconstruction-using-icp-and-point-based-fusion",
+          title: '3D Dense Reconstruction Using ICP and Point-based Fusion',
+          description: "In this project we implemented a 3D dense mapping system that reconstructs a 3D dense model with the given RGB-D image sequences.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/slam_4/";
+            },},{id: "projects-orb-slam-using-multiple-cameras",
+          title: 'ORB-SLAM using Multiple Cameras',
+          description: "In this project we made a Visual Simultaneous Localization and Mapping (VSLAM) system which integrates measurements from multiple cameras to achieve robust pose tracking and mapping.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/slam_final_project/";
             },},{
         id: 'social-email',
         title: 'email',
