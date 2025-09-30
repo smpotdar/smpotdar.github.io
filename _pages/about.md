@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+description: Machine Learning Department. School of Computer Science. Carnegie Mellon University.
 
 profile:
   align: right
