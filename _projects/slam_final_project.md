@@ -26,7 +26,7 @@ A demo video of the project can be found by clicking on the image below
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
         <a href="https://youtu.be/W9X_5pSzR-o"  target="_blank">
-            <img class="img-fluid rounded z-depth-1" src="/assets/img/slam_mc_orb.gif" alt="" title="example image"/>
+            <img class="img-fluid rounded z-depth-1" src="assets/img/slam_mc_orb.gif" alt="" title="example image"/>
         </a>
     </div>
 </div>
