@@ -49,10 +49,7 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather.html";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
-          description: "",
-          section: "News",},{id: "news-3dq-nets-accepted-to-cvpr-workshop-2020",
+            },},{id: "news-3dq-nets-accepted-to-cvpr-workshop-2020",
           title: '3DQ-Nets accepted to CVPR workshop 2020',
           description: "",
           section: "News",},{id: "news-graduated-with-master-s-from-cmu",
