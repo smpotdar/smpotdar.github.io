@@ -2,7 +2,9 @@
 layout: page
 title: 3D Dense Reconstruction Using ICP and Point-based Fusion
 description: In this project we implemented a 3D dense mapping system that reconstructs a 3D dense model with the given RGB-D image sequences.
-img: /assets/img/icp_thumbnail.png
+img: assets/img/icp_thumbnail.png
+importance: 1
+category: work
 ---
 
 In this project we implemented a 3D dense mapping system that reconstructs a 3D dense model of a static indoor environment with given RGB-D image sequences.

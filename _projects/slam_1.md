@@ -2,7 +2,9 @@
 layout: page
 title: Particle Filter
 description: In this assignment, our task was to implement the popular Particle Filter technique for localising a robot given its sensor data and a map.
-img: /assets/img/particle_filter_mini.gif
+img: assets/img/particle_filter_mini.gif
+importance: 1
+category: work
 ---
 
 Particle filters are a type of state estimators. In this project we use the principle of particle filters to perform Monte Carlo Localization.

@@ -2,7 +2,9 @@
 layout: page
 title: 3D Reconstruction using RGB images
 description: In this project, our task was to reconstruct an object in 3D using 3D rgb images.
-img: /assets/img/3dr_rgb_thumbnail.gif
+img: assets/img/3dr_rgb_thumbnail.gif
+importance: 1
+category: work
 ---
 
 In this project we implemented two different methods i.e. the 8-point algorithm and the 7-point algorithm to estimate

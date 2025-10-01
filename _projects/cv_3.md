@@ -2,8 +2,9 @@
 layout: page
 title: Lucas-Kanade Tracking
 description: In this assignment, I implemented 2 different variants of the famous Lucas-Kanade Tracking algorithm.
-img: /assets/img/klt_thumbnail.gif
-
+img: assets/img/klt_thumbnail.gif
+importance: 1
+category: work
 ---
 
 

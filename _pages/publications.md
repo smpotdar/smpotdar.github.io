@@ -13,21 +13,14 @@ nav_order: 2
 
 {% include bib_search.liquid %}
 
-### Conference and Journal Papers
-
 <div class="publications">
 
+### Conference and Journal Papers
 {% bibliography %}
 
-</div>
-
 ### Project reports and white papers
-
-<div class="publications">
-
-{% for y in page.wyears %}
-  <h2 class="year">{{y}}</h2>
-  {% bibliography -f whitepapers -q @*[year={{y}}]* %}
-{% endfor %}
+{% bibliography --file whitepapers %}
 
 </div>
+
+

@@ -2,7 +2,9 @@
 layout: page
 title: ORB-SLAM using Multiple Cameras
 description: In this project we made a Visual Simultaneous Localization and Mapping (VSLAM) system which integrates measurements from multiple cameras to achieve robust pose tracking and mapping.
-img: /assets/img/mc_orb_thumbnail.gif  
+img: assets/img/mc_orb_thumbnail.gif  
+importance: 1
+category: work
 ---
 
 **_Abstract_** : Most of the autonomous systems such as self-
