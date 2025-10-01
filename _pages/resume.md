@@ -3,6 +3,7 @@ layout: page
 title: Resume
 permalink: /resume/
 nav: true
+nav_order: 4
 ---
 
 <meta http-equiv="refresh" content="0; url={{ '/assets/pdf/shubhankar_potdar_CV.pdf' | relative_url }}">
