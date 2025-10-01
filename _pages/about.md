@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 description: Machine Learning Department. School of Computer Science. Carnegie Mellon University.
 

@@ -2,7 +2,9 @@
 layout: page
 title: Image stitching using homographies
 description: In this assignment, I performed stiched of two images by first finding correspondencies between the two images and estimating the planar homography transformation matrix between the two images.
-img: /assets/img/incline_mini.jpg
+img: assets/img/incline_mini.jpg
+importance: 1
+category: work
 ---
 
 In this assignment, I implemented an interest point (keypoint) detector, a feature
