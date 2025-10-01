@@ -1,5 +1,5 @@
 ---
-layout: none
+layout: redirect
 permalink: /resume/
 title: Resume
 nav: true
