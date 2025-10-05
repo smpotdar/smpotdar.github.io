@@ -32,4 +32,4 @@ A demo video of the project can be found by clicking on the image below
 </div>
 
 
-For detailed information, please refer the paper.
+For detailed information, please refer the <a href="https://smpotdar.github.io/assets/pdf/slam_project_final_report.pdf" target="_blank">white paper</a>.
